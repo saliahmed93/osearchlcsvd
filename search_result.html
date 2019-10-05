@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>List Categoris</title>
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/chosen.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="html/krystal/html/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700" rel="stylesheet">
+</head>
+<body class="page-product list-view">
+<div class="wrapper">
+    <form id="block-search-mobile" method="get" class="block-search-mobile">
+        <div class="form-content">
+            <div class="control">
+                <a href="#" class="close-block-serach"><span class="icon fa fa-times"></span></a>
+                <input type="text" name="search" placeholder="Search" class="input-subscribe">
+                <button type="submit" class="btn search">
+                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <!-- HEADER -->
+    <header class="site-header header-opt-1">
+        <!-- header-top -->
+        <div class="header-top">
+            <div class="container">
+                <!-- hotline -->
+                <ul class="nav-top-left" >
+                    <li><a href="">Welcome to KryStal - Always free delivery</a></li>
+                </ul><!-- hotline -->
+                <!-- heder links -->
+                <ul class="nav-top-right krystal-nav">
+                    <li ><a href="">Newsletter</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="" class="dropdown-toggle">
+                            <img src="html/krystal/html/images/home1/l1.jpg" alt="flag">English<i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="submenu parent-megamenu">
+                            <li class="switcher-option">
+                                <a href="" class="flag"><img src="html/krystal/html/images/home1/l1.jpg" alt="flag">English</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="flag"><img src="html/krystal/html/images/home1/l2.jpg" alt="flag">Hungary</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="flag"><img src="html/krystal/html/images/home1/l3.jpg" alt="flag">German</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="flag"><img src="html/krystal/html/images/home1/l4.jpg" alt="flag">French</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="flag"><img src="html/krystal/html/images/home1/l5.jpg" alt="flag">Canada</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="dropdown-toggle">
+                            <span>Option 1</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="submenu parent-megamenu">
+                            <li class="switcher-option">
+                                <a href="" class="switcher-flag icon">Option 1</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="switcher-flag icon">Option 1</a>
+                            </li>
+                            <li class="switcher-option">
+                                <a href="" class="switcher-flag icon">Option 1</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href=""><i class="fa fa-user" aria-hidden="true"></i>Register / Sign in</a></li>
+                </ul><!-- heder links -->
+            </div>
+        </div> <!-- header-top -->
+        <!-- header-content -->
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 nav-left">
+                        <!-- logo -->
+                        <strong class="logo">
+                            <a href=""><img src="html/krystal/html/images/home1/logo.jpg" alt="logo"></a>
+                        </strong><!-- logo -->
+                    </div>
+                    <div class="col-md-8 nav-mind">
+                        <!-- block search -->
+                        <div class="block-search">
+                            <div class="block-content">
+                                <div class="categori-search  ">
+                                    <select data-placeholder="All Categories" class="chosen-select categori-search-option">
+                                        <option value="">Search Results</option>
+
+
+                                    </select>
+                                </div>
+                                <div class="form-search">
+                                    <form>
+                                        <div class="box-group">
+                                            <input type="text" class="form-control" id="search_text" placeholder="Searh entire store here...">
+                                            <button class="btn btn-search" type="button" onchange="search_from_csv()"><span>search</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- block search -->
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- header-content -->
+        <!-- header-menu-bar -->
+        <div class="header-menu-bar header-sticky">
+            <div class="header-menu-nav menu-style-2">
+                <div class="container">
+                    <div class="header-menu-nav-inner">
+                        <div id="box-vertical-megamenus" class="box-vertical-megamenus nav-toggle-cat">
+                            <h4 class="title active">
+                                    <span class="btn-open-mobile home-page">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                <span class="title-menu">All Departments</span>
+                            </h4>
+                            <div class="vertical-menu-content" >
+                                <span class="btn-close hidden-md"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                <ul class="vertical-menu-list">
+                                    <li><a href="">Seacrh Results</a></li>
+                                    <li><a href="">Seacrh Results</a></li>
+                                    <li><a href="">Seacrh Results</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-menu header-menu-resize">
+                            <ul class="header-nav krystal-nav">
+                                <li class="btn-close hidden-md"><i class="fa fa-times" aria-hidden="true"></i></li>
+                                <li class="menu-item-has-children arrow">
+                                    <a href="html/krystal/html/index2.html" class="dropdown-toggle">Home</a>
+                                    <span class="toggle-submenu hidden-md"></span>
+                                    <ul class="submenu parent-megamenu">
+                                        <li class="menu-item">
+                                            <a href="html/krystal/html/index.html">Home 1</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="html/krystal/html/index2.html">Home 2</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="html/krystal/html/index3.html">Home 3</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="html/krystal/html/index4.html">Home 4</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="html/krystal/html/index5.html">Home 5</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item-has-children arrow item-megamenu item-megamenu-sub">
+                                    <a href="#" class="dropdown-toggle">Fashions</a>
+                                    <span class="toggle-submenu hidden-md"></span>
+                                    <div class="submenu parent-megamenu megamenu">
+                                        <div class="row">
+                                            <div class="submenu-banner submenu-banner-menu-3">
+                                                <div class="col-md-4">
+                                                    <div class="dropdown-menu-info">
+                                                        <h6 class="dropdown-menu-title">Fashion Clothing</h6>
+                                                        <div class="dropdown-menu-content">
+                                                            <ul class="menu">
+                                                                <li class="menu-item"><a href="#">Leather Jackets</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item-has-children arrow">
+                                    <a href="#" class="dropdown-toggle">Sub Menu</a>
+                                    <span class="toggle-submenu hidden-md"></span>
+                                    <ul class="submenu parent-megamenu">
+                                        <li class="menu-item">
+                                            <a href="index.html">Checkout</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="index.html">Shopping Cart</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="index.html">Contact Us</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="index.html">Login</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="index.html" class="dropdown-toggle">Contact Us</a>
+                                    <span class="toggle-submenu hidden-md"></span>
+                                </li>
+                                <li class="menu-item-has-children arrow">
+                                    <a href="#" class="dropdown-toggle">Blog</a>
+                                    <span class="toggle-submenu hidden-md"></span>
+                                    <ul class="submenu parent-megamenu">
+                                        <li class="menu-item">
+                                            <a href="index.html">Blog Grid</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="index.html">Blog List</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="index.html">Blog Single</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span data-action="toggle-nav" class="menu-on-mobile hidden-md">
+                                <span class="btn-open-mobile home-page">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                <span class="title-menu-mobile">Main menu</span>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- end HEADER -->
+    <!-- MAIN -->
+    <main class="site-main product-list">
+        <div class="container">
+            <ol class="breadcrumb-page">
+                <li><a href="#">Home </a></li>
+                <li class="active"><a href="#">Search Results  </a></li>
+            </ol>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-8 float-none float-right padding-left-5">
+                    <div class="main-content">
+
+                        <div class="toolbar-products">
+                            <h4 class="title-product">SEARCH RESULTS</h4>
+                            <div class="toolbar-option">
+                                <div class="toolbar-sort">
+                                    <select class="chosen-select sorter-options form-control" >
+                                        <option selected="selected" value="position">Search Results</option>
+                                        <option value="name">Ratings</option>
+                                    </select>
+                                </div>
+
+                                <div class="modes">
+                                    <a href="html/krystal/html/index.html" title="List" class="active modes-mode mode-list"><i class="flaticon-interface"></i>
+                                        <span>List</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="products products-list">
+ <div class="product-image">
+    <a href=""><img class="product_image" src="html/krystal/html/images/product/p2.jpg" alt="p2"></a>
+    <span class="onnew">new</span>
+    <a href="#" class="quick-view">Quick View</a>
+ </div>
+ <div class="product-info">
+ <div class="product-name"><a href="" class="product_title">Smartphone MTK6737 Quad Core.</a></div>
+ <span class="star-rating">
+    <span class="review">Rating</span>
+ </span>
+ <div class="product-infomation"></div>
+ </div>
+
+                        </div>
+
+
+                        <div class="pagination">
+                            <ul class="nav-links">
+                                <li class="active"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li class="back-next"><a href="">Next</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="col-sidebar">
+                        <div class="filter-options">
+                            <div class="block-title">Shop by</div>
+                            <div class="block-content">
+                                <div class="filter-options-item filter-categori">
+                                    <div class="filter-options-title">Categories</div>
+                                    <div class="filter-options-content">
+                                        <ul>
+                                            <li><label class="inline" ><input type="checkbox"><span class="input"></span>Search Results</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  </div>
+                             <div class="block-banner-sidebar">
+                                 <a href=""><img src="html/krystal/html/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
+                             </div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main><!-- end MAIN -->
+    <!-- FOOTER -->
+    <footer class="site-footer footer-opt-2">
+        <div class="copyright full-width">
+            <div class="container">
+                <div class="copyright-right">
+                    © Copyright 2017. All Rights Reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer><!-- end FOOTER -->
+    <!--back-to-top  -->
+    <!-- <a href="#" class="back-to-top">
+        <i aria-hidden="true" class="fa fa-angle-up"></i>
+    </a> -->
+</div>
+<a href="#" id="scrollup" title="Scroll to Top">Scroll</a>
+<!-- jQuery -->
+<script type="text/javascript" src="html/krystal/html/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/wow.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.actual.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.elevateZoom.min.js"></script>
+<script src="html/krystal/html/js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="html/krystal/html/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<script src="html/krystal/html/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/function.min.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/Modernizr.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.plugin.js"></script>
+<script type="text/javascript" src="html/krystal/html/js/jquery.countdown.js"></script>
+<script>
+
+ var product = (function () {/*
+ <div class="product-image">
+    <a href=""><img class="product_image" src="html/krystal/html/images/product/p2.jpg" alt="p2"></a>
+    <span class="onnew">new</span>
+    <a href="#" class="quick-view">Quick View</a>
+ </div>
+ <div class="product-info">
+ <div class="product-name"><a href="" class="product_title">Smartphone MTK6737 Quad Core.</a></div>
+ <span class="star-rating">
+    <span class="review">Rating</span>
+ </span>
+ <div class="product-infomation"></div>
+ </div>
+ */}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get('search');
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "csv/carss.csv",
+            dataType: "text",
+            success: function(data) {
+                let collection = processData(data);
+                for(let i=0; i<collection.length; i++){
+                    if(collection[i][0].toLowerCase().search(search.toLowerCase()) != -1){
+                        let product_item = document.createElement('div');
+                        product_item.className='product-items';
+                        product_item.innerHTML = product;
+                        $(product_item).find('.product_image')[0].src = collection[i][2];
+                        $(product_item).find('.product_title').text(collection[i][0]);
+                        for(let j=0; j<parseInt(collection[i][1]); j++){
+                            $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
+                        }
+                        $('.products-list').append(product_item);
+                    }
+                }
+            }
+        });
+    });
+    function processData(allText) {
+        var allTextLines = allText.split(/\r\n|\n/);
+        var headers = allTextLines[0].split(',');
+        var lines = [];
+        for (var i=0; i<allTextLines.length; i++) {
+            var data = allTextLines[i].split(',');
+            if (data.length == headers.length) {
+
+                var tarr = [];
+                for (var j=0; j<headers.length; j++) {
+                    tarr.push(data[j]);
+                }
+                lines.push(tarr);
+            }
+        }
+        console.log(lines);
+        return lines;
+    }
+</script>
+</body>
+</html>
