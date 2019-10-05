@@ -396,10 +396,10 @@
                         product_item.innerHTML = product;
                         $(product_item).find('.product_image')[0].src = collection[i][2];
                         $(product_item).find('.product_title').text(collection[i][0]);
+                        $(product_item).find('.product-infomation').text(collection[i][3]);
                         for(let j=0; j<parseInt(collection[i][1]); j++){
                             $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
                         }
-                        $(product_item).find('.product-infomation').text(collection[i]);
                         $('.products-list').append(product_item);
                     }
                 }
