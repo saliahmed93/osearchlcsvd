@@ -131,7 +131,26 @@ ul li a{
 	}
 
 }
+@media (max-width: 768) {
+ul#collapsibleNavbar.navb-mob.navbar-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #d1d1d1;
+    justify-content: initial !important;
+    top: 40px;
+    box-sizing: border-box;
+	z-index: 99;
+}
 
+ul#collapsibleNavbar.navb-mob.navbar-nav li.nav-item:first-child {margin: 10px 0 0;}
+
+ul#collapsibleNavbar.navb-mob.navbar-nav li.nav-item:last-child {
+    margin: 0 0 10px;
+}
+}
 @media all and (max-width: 767px) and (min-width: 320px){
 ul#collapsibleNavbar.navb-mob.navbar-nav {
     position: absolute;
