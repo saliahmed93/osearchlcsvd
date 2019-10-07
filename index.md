@@ -24,7 +24,7 @@
 						<button class="navbar-toggler this" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 						<span class="fa fa-bars"></span>
 						</button>
-						<ul  class="navbar-nav collapse navbar-collapse justify-content-end" id="collapsibleNavbar" style="">
+						<ul  class="navbar-nav navb-mob collapse navbar-collapse justify-content-end" id="collapsibleNavbar" style="">
 							
 							<li class="nav-item" >
 								<a class="nav-link" href="#" title="">HomePage</a>
