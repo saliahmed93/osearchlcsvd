@@ -283,18 +283,15 @@
 <!--Load more-->
                         <a href="#" id="loadMore">Load More</a>
 
-<p class="totop"> 
-    <a href="#top">Back to top</a> 
-</p>
                         <!--Load more-->
 
                         <div class="pagination">
-                            <ul class="nav-links">
+<!--<ul class="nav-links">
                                 <li class="active"><a href="">1</a></li>
                                 <li><a href="">2</a></li>
                                 <li><a href="">3</a></li>
                                 <li class="back-next"><a href="">Next</a></li>
-                            </ul>
+                            </ul>-->
 
                         </div>
                     </div>
@@ -396,7 +393,7 @@
                         $(product_item).find('.product_title').text(collection[i][0]);
                         $(product_item).find('.product-infomation').text(collection[i][3]);
                         for(let j=0; j<parseInt(collection[i][1]); j++){
-                            $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
+                            $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>'+$(product_item).find('.product-infomation').text(collection[i][1]));
                         }
                         $('.products-list').append(product_item);
                     }
