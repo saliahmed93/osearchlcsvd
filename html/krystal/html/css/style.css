@@ -26,27 +26,11 @@ REPONSIVE
 @import url(html/krystal/html/js/fancybox/source/helpers/jquery.fancybox-thumbs.css);
 
 /*Load more button*/
-.totop {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-}
-.totop a {
-    display: none;
-}
-a, a:visited {
-    color: #33739E;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-}
-a:hover {
-    text-decoration: none;
-}
+
 #loadMore {
     padding: 10px;
     text-align: center;
-    background-color: #33739E;
+    background-color: #31629f;
     color: #fff;
     border-width: 0 1px 1px 0;
     border-style: solid;
