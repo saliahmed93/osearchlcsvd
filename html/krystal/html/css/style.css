@@ -62,7 +62,7 @@ a:hover {
     color: #33739E;
 }
 .products-list .product-items {
-	display: none !important;
+	display: none;
 }
 /*Load more button*/
 body{
