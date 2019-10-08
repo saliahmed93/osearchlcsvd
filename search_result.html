@@ -423,6 +423,8 @@
     }
     
     /*loadmore*/
+    $( document ).ready(function() {
+  
     $(function () {
     $(".products-list .product-items").slice(0, 2).show();
     $("#loadMore").on('click', function (e) {
@@ -450,6 +452,7 @@ $(window).scroll(function () {
     } else {
         $('.totop a').fadeOut();
     }
+});
 });
 </script>
 </body>
