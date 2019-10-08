@@ -356,11 +356,38 @@
 <script type="text/javascript" src="html/krystal/html/js/Modernizr.js"></script>
 <script type="text/javascript" src="html/krystal/html/js/jquery.plugin.js"></script>
 <script type="text/javascript" src="html/krystal/html/js/jquery.countdown.js"></script>
-    <script type="text/javascript" src="lod.js"></script>
+   <!-- <script type="text/javascript" src="lod.js"></script>-->
     
 <script>
 
-    
+     $(function () {
+    $(".products-list .product-items").slice(0, 4).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $(".products-list .product-items:hidden").slice(0, 2).slideDown();
+        if ($(".products-list .product-items:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+});
+
+$('a[href=#top]').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('.totop a').fadeIn();
+    } else {
+        $('.totop a').fadeOut();
+    }
+});
  var product = (function () {/*
  <div class="product-image">
     <a href=""><img class="product_image" src="html/krystal/html/images/product/p2.jpg" alt="p2"></a>
