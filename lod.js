@@ -2,7 +2,7 @@
     $( document ).ready(function() {
   
     $(function () {
-    $(".products-list .product-items").slice(0, 2).show();
+    $(".products-list .product-items").slice(0, 4).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".products-list .product-items:hidden").slice(0, 2).slideDown();
