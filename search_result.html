@@ -407,8 +407,9 @@
                         for(let j=0; j<parseInt(collection[i][1]); j++){
                             /**ratinn=$(this).text(collection[i][1]);
                             console.log(ratinn);**/
-                            $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>'+collection[i][1]);
+                            $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
                         }
+                        $(product_item).find('.review').prepend(collection[i][1]);
                         $('.products-list').append(product_item);
                     }
                 }
