@@ -359,7 +359,15 @@
    <!-- <script type="text/javascript" src="lod.js"></script>-->
     
 <script>
-    
+    var h = window.innerHeight;
+$(".container").css({"height":h});
+
+$('.btn-search').click(function () {
+   let search = $('#search_text').val();
+   if(search != '') {
+       window.location.href = "search_result?search="+search;
+   }
+});
     $( window ).on( "load", function() {
     $(".products-list .product-items").slice(0, 3).show();
     $("#loadMore").on('click', function (e) {
