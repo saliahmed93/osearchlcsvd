@@ -359,7 +359,8 @@
    <!-- <script type="text/javascript" src="lod.js"></script>-->
     
 <script>
-    $( function () {
+    
+    $( window ).on( "load", function() {
     $(".products-list .product-items").slice(0, 3).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
@@ -372,9 +373,6 @@
         }, 1500);
     });
 });
-
-
-
  var product = (function () {/*
  <div class="product-image">
     <a href=""><img class="product_image" src="html/krystal/html/images/product/p2.jpg" alt="p2"></a>
