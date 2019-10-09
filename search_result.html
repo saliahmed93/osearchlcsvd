@@ -397,7 +397,7 @@ $('.btn-search').click(function () {
     $(document).ready(function() {
         $.ajax({
             type: "GET",
-            url: "csv/carz.csv",
+            url: "csv/carz.xls",
             dataType: "text",
             success: function(data) {
                 let collection = processData(data);
