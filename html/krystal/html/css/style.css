@@ -24,7 +24,11 @@ REPONSIVE
 /*-------------------------*/
 @import url(html/krystal/html/js/fancybox/source/jquery.fancybox.css);
 @import url(html/krystal/html/js/fancybox/source/helpers/jquery.fancybox-thumbs.css);
-
+.product-item:nth-child(1),
+.product-item:nth-child(2),
+.product-item:nth-child(3){
+   display: block !important;
+}
 /*Load more button*/
 
 #loadMore {
@@ -6738,3 +6742,5 @@ label.inline{
   color: #fff;
   border: 1px solid #31629f ;
 }
+
+
