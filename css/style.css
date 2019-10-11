@@ -189,7 +189,7 @@ ul#collapsibleNavbar.navb-mob.navbar-nav li.nav-item:last-child {
     margin: 0 0 10px;
 }
 }
-@media all and (max-width: 412px) and (min-width: 320px){
+@media all and (max-width: 575px) and (min-width: 320px){
 ul#collapsibleNavbar {
     position: absolute;
     width: 100%;
