@@ -24,11 +24,18 @@ REPONSIVE
 /*-------------------------*/
 @import url(html/krystal/html/js/fancybox/source/jquery.fancybox.css);
 @import url(html/krystal/html/js/fancybox/source/helpers/jquery.fancybox-thumbs.css);
-/*.products-list .product-items:nth-child(1),
+.products-list .product-items:nth-child(1),
 .products-list .product-items:nth-child(2),
-.products-list .product-items:nth-child(3){
+.products-list .product-items:nth-child(3),
+.products-list .product-items:nth-child(4),
+.products-list .product-items:nth-child(5),
+.products-list .product-items:nth-child(6),
+.products-list .product-items:nth-child(7),
+.products-list .product-items:nth-child(8),
+.products-list .product-items:nth-child(9),
+.products-list .product-items:nth-child(10){
    display: block !important;
-}*/
+}
 
 /*Load more button*/
 
