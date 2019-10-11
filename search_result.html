@@ -366,7 +366,7 @@ $('.btn-search').click(function () {
    }
 });
     $( window ).on( "load", function() {
-    $(".products-list .product-items").slice(0, 10).show();
+    $(".products-list .product-items").slice(0, 10).style.display = "block";
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".products-list .product-items:hidden").slice(0, 15).slideDown();
