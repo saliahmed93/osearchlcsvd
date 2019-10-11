@@ -32,22 +32,25 @@ REPONSIVE
 /*Load more button*/
 
 #loadMore {
-    padding: 10px;
+    padding: 7px 10px;
     text-align: center;
     background-color: #31629f;
     color: #fff;
-    border-width: 0 1px 1px 0;
+    border-width: 2px;
     border-style: solid;
-    border-color: #fff;
     box-shadow: 0 1px 1px #ccc;
     transition: all 600ms ease-in-out;
     -webkit-transition: all 600ms ease-in-out;
     -moz-transition: all 600ms ease-in-out;
     -o-transition: all 600ms ease-in-out;
+    margin: 30px 0px;
+    display: table;
+    border-color: transparent;
 }
 #loadMore:hover {
     background-color: #fff;
     color: #33739E;
+    border-color: #33739E;
 }
 
 /*Load more button*/
