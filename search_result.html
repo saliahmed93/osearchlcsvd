@@ -400,6 +400,9 @@ $('.btn-search').click(function () {
             url: "csv/carss.csv",
             dataType: "text",
             success: function(data) {
+                if (data === undefined) {
+                    return 'Undefined value!';
+                }
                 let collection = processData(data);
                 for(let i=0; i<collection.length; i++){
                     if(collection[i][0].toLowerCase().search(search.toLowerCase()) != -1){
