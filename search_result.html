@@ -398,7 +398,6 @@ $('.btn-search').click(function () {
         const xhr = new XMLHttpRequest();
 const url = 'https://csvcars.000webhostapp.com/csv/carss.csv';
 xhr.open('GET', url);
-xhr.onreadystatechange = someHandler;
 xhr.send(); 
         $.ajax({
             type: "GET",
