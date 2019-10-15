@@ -398,19 +398,7 @@ $('.btn-search').click(function () {
         const xhr = new XMLHttpRequest();
 const url = 'https://csvcars.000webhostapp.com/csv/carss.csv';
 xhr.open('GET', url);
-xhr.onreadystatechange = someHandler;
 xhr.send(); 
-        xhr.onreadystatechange = function () {
-    if (this.readyState === 4) {
-        if (this.status === 200) {
-            o.callback(xhr.responseText);
-        } else {
-            return false;
-        }
-    } else {
-        return false;
-    }
-};
         $.ajax({
             type: "GET",
             url: xhr,
