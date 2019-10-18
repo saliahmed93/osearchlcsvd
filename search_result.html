@@ -396,12 +396,12 @@ $('.btn-search').click(function () {
     $(document).ready(function() {
         const xhr = new XMLHttpRequest();
         const url = 'csv/carss.csv';
-        xhr.open('GET', url);
-        xhr.onreadystatechange = someHandler;
-        xhr.send(); 
+        //xhr.open('GET', url);
+        //xhr.onreadystatechange = someHandler;
+        //xhr.send(); 
         $.ajax({
             type: "GET",
-            url: xhr,
+            url: "csv/carss.csv",
             dataType: "text",
             success: function(data) {
                 let collection = processData(data);
