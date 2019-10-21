@@ -34,7 +34,7 @@
         <div class="header-top">
             <div class="container">
                 <!-- hotline -->
-                <ul class="nav-top-left" >
+                <ul class="nav-top-left">
                     <li><a href="">Welcome to KryStal - Always free delivery</a></li>
                 </ul><!-- hotline -->
                 <!-- heder links -->
@@ -255,7 +255,6 @@
             <div class="row">
                 <div class="col-md-9 col-sm-8 float-none float-right padding-left-5">
                     <div class="main-content">
-
                         <div class="toolbar-products">
                             <h4 class="title-product">SEARCH RESULTS</h4>
                             <div class="toolbar-option">
@@ -265,7 +264,6 @@
                                         <option value="name">Ratings</option>
                                     </select>
                                 </div>
-
                                 <div class="modes">
                                     <a href="html/krystal/html/index.html" title="List" class="active modes-mode mode-list"><i class="flaticon-interface"></i>
                                         <span>List</span>
@@ -273,13 +271,9 @@
                                 </div>
                             </div>
                         </div>
+                        <img src="img/loader.gif" id="loader_gif" style=" margin: 0 auto; display: block;">
 
-
-
-                        <div class="products products-list">
-
-
-                        </div>
+                        <div class="products products-list"></div>
 <!--Load more-->
                         <a href="#" id="loadMore">Load More</a>
 
@@ -294,7 +288,7 @@
                             </ul>-->
 
                         </div>
-                    </div>
+                    </img>
                 </div>
                 <div class="col-md-3 col-sm-4">
                     <div class="col-sidebar">
@@ -361,7 +355,7 @@
 $('.btn-search').click(function () {
    let search = $('#search_text').val();
    if(search != '') {
-       window.location.href = "search_result?search="+search;
+       window.location.href = "search_result.html?search="+search;
    }
 });
     $( window ).on( "load", function() {
@@ -394,19 +388,33 @@ $('.btn-search').click(function () {
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get('search');
     $(document).ready(function() {
-        const xhr = new XMLHttpRequest();
-        const url = 'csv/carsss.csv';
-        //xhr.open('GET', url);
-        //xhr.onreadystatechange = someHandler;
-        //xhr.send(); 
+        $('#search_text').val(search);
+        $('#loader_gif').show();
         $.ajax({
             type: "GET",
-            url: "csv/carsss.csv",
+            url: 'csv/carss.csv',
             dataType: "text",
             success: function(data) {
+                $('#loader_gif').hide();
                 let collection = processData(data);
                 for(let i=0; i<collection.length; i++){
-                    if(collection[i][0].toLowerCase().search(search.toLowerCase()) != -1){
+                    if(search != "" && search != null){
+                        if(collection[i][0].toLowerCase().search(search.toLowerCase()) != -1){
+                            let product_item = document.createElement('div');
+                            product_item.className='product-items';
+                            product_item.innerHTML = product;
+                            $(product_item).find('.product_image')[0].src = collection[i][2];
+                            $(product_item).find('.product_title').text(collection[i][0]);
+                            $(product_item).find('.product-infomation').text(collection[i][3]);
+                            for(let j=0; j<parseInt(collection[i][1]); j++){
+                                /**ratinn=$(this).text(collection[i][1]);
+                                 console.log(ratinn);**/
+                                $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
+                            }
+                            $(product_item).find('.review').prepend('<span class="rate-num">'+collection[i][1]+'/5</span>');
+                            $('.products-list').append(product_item);
+                        }
+                    } else {
                         let product_item = document.createElement('div');
                         product_item.className='product-items';
                         product_item.innerHTML = product;
@@ -414,8 +422,6 @@ $('.btn-search').click(function () {
                         $(product_item).find('.product_title').text(collection[i][0]);
                         $(product_item).find('.product-infomation').text(collection[i][3]);
                         for(let j=0; j<parseInt(collection[i][1]); j++){
-                            /**ratinn=$(this).text(collection[i][1]);
-                            console.log(ratinn);**/
                             $(product_item).find('.star-rating').prepend('<i class="fa fa-star" aria-hidden="true"></i>');
                         }
                         $(product_item).find('.review').prepend('<span class="rate-num">'+collection[i][1]+'/5</span>');
